@@ -1,8 +1,8 @@
 package es.alvaroCDN1.actividad4.actividades;
 
+import es.alvaroCDN1.actividad4.actividades.acciones.CerrarVentana;
+
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 /**
  * Clase en la que debemos replicar la ventana del enunciado usando bucles
@@ -17,13 +17,9 @@ public class Actividad1 {
     public Actividad1() {
         this.ventana = new Frame("Actividad 1");
         this.ventana.setSize(1024, 768);
-        this.ventana.setLocation(300, 120);
+        this.ventana.setLocation(300, 50);
 
-        this.ventana.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
+        this.ventana.addWindowListener(new CerrarVentana().cerrar(this.ventana));
 
         this.ventana.setVisible(true);
     }
@@ -113,17 +109,5 @@ public class Actividad1 {
         }
 
         ventana.add(panelGeneral);
-    }
-
-    private Button[] crearBotones(int longitud) {
-        Button[] listaBotones = new Button[longitud];
-
-        String[] letras = {"A", "B", "C", "D"};
-
-        for (int i = 0; i < longitud; i++) {
-            listaBotones[i] = new Button(letras[i]);
-        }
-
-        return listaBotones;
     }
 }

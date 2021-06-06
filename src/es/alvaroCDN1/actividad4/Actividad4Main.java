@@ -1,6 +1,8 @@
 package es.alvaroCDN1.actividad4;
 
 import es.alvaroCDN1.actividad4.actividades.Actividad1;
+import es.alvaroCDN1.actividad4.actividades.Actividad2;
+import es.alvaroCDN1.actividad4.actividades.Actividad3;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -26,6 +28,14 @@ public class Actividad4Main {
             switch (opcion) {
                 case 1:
                     new Actividad1().iniciarActividad();
+                    break;
+
+                case 2:
+                    new Actividad2().iniciarActividad();
+                    break;
+
+                case 3:
+                    new Actividad3().iniciarActividad();
                     break;
 
                 default:
