@@ -1,15 +1,19 @@
-package es.alvaroCDN1.actividad4.actividades;
+package es.alvaroCDN1.actividad4.actividades.actividad3;
 
-import es.alvaroCDN1.actividad4.actividades.acciones.CerrarVentana;
+import es.alvaroCDN1.actividad4.acciones.CerrarVentana;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
+/**
+ * Crea una ventana con dos botones y una etiqueta que indica cual es el boton que se ha pulsado en ultimo lugar
+ */
 public class Actividad3 {
     private Frame ventana;
 
+    /**
+     * Constructor de la clase Actividad3
+     */
     public Actividad3() {
         this.ventana = new Frame("Actividad 3");
         this.ventana.setSize(380, 120);
@@ -20,6 +24,9 @@ public class Actividad3 {
         this.ventana.setVisible(true);
     }
 
+    /**
+     * Anade todos los elementos de la actividad a la ventana
+     */
     public void iniciarActividad() {
         Panel panelPrincipal = new Panel();
 

@@ -1,8 +1,9 @@
 package es.alvaroCDN1.actividad4;
 
-import es.alvaroCDN1.actividad4.actividades.Actividad1;
-import es.alvaroCDN1.actividad4.actividades.Actividad2;
-import es.alvaroCDN1.actividad4.actividades.Actividad3;
+import es.alvaroCDN1.actividad4.actividades.actividad1.Actividad1;
+//import es.alvaroCDN1.actividad4.actividades.Actividad2;
+import es.alvaroCDN1.actividad4.actividades.actividad3.Actividad3;
+import es.alvaroCDN1.actividad4.actividades.actividad4.Actividad4;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -31,11 +32,15 @@ public class Actividad4Main {
                     break;
 
                 case 2:
-                    new Actividad2().iniciarActividad();
+                    //new Actividad2().iniciarActividad();
                     break;
 
                 case 3:
                     new Actividad3().iniciarActividad();
+                    break;
+
+                case 4:
+                    new Actividad4().iniciarActividad();
                     break;
 
                 default:

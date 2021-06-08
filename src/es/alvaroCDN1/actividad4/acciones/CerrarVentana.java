@@ -1,4 +1,4 @@
-package es.alvaroCDN1.actividad4.actividades.acciones;
+package es.alvaroCDN1.actividad4.acciones;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;
