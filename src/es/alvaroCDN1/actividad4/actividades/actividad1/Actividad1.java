@@ -1,6 +1,6 @@
 package es.alvaroCDN1.actividad4.actividades.actividad1;
 
-import es.alvaroCDN1.actividad4.acciones.CerrarVentana;
+import es.alvaroCDN1.actividad4.Ventana;
 
 import java.awt.*;
 
@@ -9,19 +9,14 @@ import java.awt.*;
  */
 public class Actividad1 {
 
-    private Frame ventana;
+    private Ventana ventana;
 
     /**
      * Constructor de la clase Actividad1
      */
     public Actividad1() {
-        this.ventana = new Frame("Actividad 1");
+        this.ventana = new Ventana("Actividad 1");
         this.ventana.setSize(1024, 768);
-        this.ventana.setLocation(300, 50);
-
-        this.ventana.addWindowListener(new CerrarVentana().cerrar(ventana));
-
-        this.ventana.setVisible(true);
     }
 
     /**

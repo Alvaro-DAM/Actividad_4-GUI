@@ -5,26 +5,21 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import es.alvaroCDN1.actividad4.acciones.CerrarVentana;
+import es.alvaroCDN1.actividad4.Ventana;
 
 /**
  * Crea una ventana que permite calcular el máximo de dos números introducidos por el usuario al pulsar un botón.
  */
 public class Actividad4 {
 
-    private Frame ventana;
+    private Ventana ventana;
 
     /**
-     * Costructor de la clase Actividad4
+     * Constructor de la clase Actividad4
      */
     public Actividad4() {
-        this.ventana = new Frame("Actividad 4");
-        this.ventana.setSize(380, 120);
-        this.ventana.setLocation(320, 50);
-
-        this.ventana.addWindowListener(new CerrarVentana().cerrar(this.ventana));
-
-        this.ventana.setVisible(true);
+        this.ventana = new Ventana("Actividad 4");
+        this.ventana.setSize(480, 210);
     }
 
     /**
@@ -41,17 +36,21 @@ public class Actividad4 {
         panelPrincipal.add(panelNumMax);
         panelPrincipal.add(panelBoton);
 
+        Dimension tamanoTextField = new Dimension(75, 25);
+
         panelNumeros.add(new Label("Primer numero: "));
         TextField textFieldnum1 = new TextField();
-        textFieldnum1.setSize(50, 15);
+        textFieldnum1.setPreferredSize(tamanoTextField);
         panelNumeros.add(textFieldnum1);
 
         panelNumeros.add(new Label("Segundo numero: "));
         TextField textFieldnum2 = new TextField();
+        textFieldnum2.setPreferredSize(tamanoTextField);
         panelNumeros.add(textFieldnum2);
 
         panelNumMax.add(new Label("Maximo: "));
         TextField textFieldMax = new TextField();
+        textFieldMax.setPreferredSize(tamanoTextField);
         textFieldMax.setEditable(false);
         panelNumMax.add(textFieldMax);
 
