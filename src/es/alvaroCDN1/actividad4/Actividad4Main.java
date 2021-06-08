@@ -5,6 +5,7 @@ import es.alvaroCDN1.actividad4.actividades.actividad1.Actividad1;
 import es.alvaroCDN1.actividad4.actividades.actividad3.Actividad3;
 import es.alvaroCDN1.actividad4.actividades.actividad4.Actividad4;
 import es.alvaroCDN1.actividad4.actividades.actividad5.Actividad5;
+import es.alvaroCDN1.actividad4.actividades.actividad6.Actividad6;
 import es.alvaroCDN1.actividad4.actividades.actividad7.Actividad7;
 
 import java.util.InputMismatchException;
@@ -17,7 +18,7 @@ public class Actividad4Main {
 
         boolean finalMenu = false;
 
-        int opcion = 0;
+        int opcion = -1;
 
         do {
             System.out.println("Seleccione una actividad\n");
@@ -53,12 +54,16 @@ public class Actividad4Main {
                     new Actividad5().iniciarActividad();
                     break;
 
+                case 6:
+                    new Actividad6().inciarActividad();
+                    break;
+
                 case 7:
                     new Actividad7().iniciarActividad();
                     break;
 
                 default:
-                    System.out.println("Opcion no valida.");
+                    System.out.println("Actividad no valida.\n");
                     break;
             }
 
