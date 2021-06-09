@@ -6,6 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import es.alvaroCDN1.actividad4.Ventana;
+import es.alvaroCDN1.actividad4.acciones.CerrarVentana;
 
 /**
  * Crea una ventana que permite calcular el máximo de dos números introducidos por el usuario al pulsar un botón.
@@ -54,6 +55,26 @@ public class Actividad4 {
         textFieldMax.setEditable(false);
         panelNumMax.add(textFieldMax);
 
+        Dialog dialog = new Dialog(this.ventana, "Error", false);
+        dialog.setSize(250, 100);
+        Panel panelDialogError = new Panel(new GridLayout(2, 1));
+        Panel panelEtiquetaError = new Panel(new FlowLayout(FlowLayout.CENTER));
+        Panel panelBotonError = new Panel(new FlowLayout(FlowLayout.CENTER));
+        panelEtiquetaError.add(new Label("Error, introduzca solo numeros"));
+        panelDialogError.add(panelEtiquetaError);
+
+        Button botonCerrar = new Button("Cerrar");
+        botonCerrar.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                dialog.dispose();
+            }
+        });
+
+        panelBotonError.add(botonCerrar);
+        panelDialogError.add(panelBotonError);
+        dialog.add(panelDialogError);
+
         Button botonCalcularMaximo = new Button("Calcula maximo");
         botonCalcularMaximo.addMouseListener(new MouseAdapter() {
             @Override
@@ -67,7 +88,7 @@ public class Actividad4 {
 
                     textFieldMax.setText("" + calcularMaximo(x, y));
                 } catch (NumberFormatException ex) {
-                    ex.printStackTrace();
+                    dialog.setVisible(true);
                 }
             }
         });
