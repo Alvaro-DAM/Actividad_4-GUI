@@ -1,7 +1,8 @@
 package es.alvaroCDN1.actividad4;
 
 import es.alvaroCDN1.actividad4.actividades.actividad1.Actividad1;
-//import es.alvaroCDN1.actividad4.actividades.Actividad2;
+//import es.alvaroCDN1.actividad4.actividades.actividad2.Actividad2;
+import es.alvaroCDN1.actividad4.actividades.actividad2.Actividad2;
 import es.alvaroCDN1.actividad4.actividades.actividad3.Actividad3;
 import es.alvaroCDN1.actividad4.actividades.actividad4.Actividad4;
 import es.alvaroCDN1.actividad4.actividades.actividad5.Actividad5;
@@ -40,7 +41,7 @@ public class Actividad4Main {
                     break;
 
                 case 2:
-                    //new Actividad2().iniciarActividad();
+                    new Actividad2().iniciarActividad();
                     break;
 
                 case 3:
